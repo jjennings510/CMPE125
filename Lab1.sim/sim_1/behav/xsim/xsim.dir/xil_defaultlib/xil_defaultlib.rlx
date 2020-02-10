@@ -1,20 +1,14 @@
 0.6
-2018.3
-Dec  7 2018
-00:33:28
-C:/Users/benja/CMPE140/Lab1.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sim_1/new/factorial_top_tb.v,1581336148,verilog,,,,factoral_top_tb,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/adder8.v,1581221881,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/and_unit.v,,adder8,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/and_unit.v,1581221881,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/cla_adder.v,,and_unit,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/cla_adder.v,1581221881,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/cla_generator.v,,cla_adder,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/cla_generator.v,1581221881,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/comparator.v,,cla_generator,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/comparator.v,1581315764,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/counter.v,,comparator,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/counter.v,1581321454,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/factorial_cu.v,,counter,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/factorial_cu.v,1581334844,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/factorial_dp.v,,factorial_cu,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/factorial_dp.v,1581335021,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/factorial_top.v,,factorial_dp,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/factorial_top.v,1581316925,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/multiplier.v,,factorial_top,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/half_adder.v,1581221881,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/multiplier.v,,half_adder,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/multiplier.v,1581321173,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/mux2.v,,multiplier,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/mux2.v,1581221881,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/register.v,,mux2,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/register.v,1581321537,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sim_1/new/factorial_top_tb.v,,register,,,,,,,,
-C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/xor_unit.v,1581221881,verilog,,C:/Users/benja/CMPE140/Lab1.srcs/sim_1/new/factorial_top_tb.v,,xor_unit,,,,,,,,
+2018.2
+Jun 14 2018
+20:41:02
+C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.sim/sim_1/behav/xsim/glbl.v,1581354196,verilog,,,,glbl,,,,,,,,
+C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sim_1/imports/new/factorial_top_tb.v,1581354196,verilog,,,,factoral_top_tb,,,,,,,,
+C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/comparator.v,1580760677,verilog,,C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/counter.v,,comparator,,,,,,,,
+C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/counter.v,1581354196,verilog,,C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/factorial_cu.v,,counter,,,,,,,,
+C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/factorial_cu.v,1581354196,verilog,,C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/factorial_dp.v,,factorial_cu,,,,,,,,
+C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/factorial_dp.v,1581354196,verilog,,C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/factorial_top.v,,factorial_dp,,,,,,,,
+C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/factorial_top.v,1581354196,verilog,,C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/multiplier.v,,factorial_top,,,,,,,,
+C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/multiplier.v,1581354196,verilog,,C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/mux2.v,,multiplier,,,,,,,,
+C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/mux2.v,1580760854,verilog,,C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/register.v,,mux2,,,,,,,,
+C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/register.v,1581354196,verilog,,C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sim_1/imports/new/factorial_top_tb.v,,register,,,,,,,,
