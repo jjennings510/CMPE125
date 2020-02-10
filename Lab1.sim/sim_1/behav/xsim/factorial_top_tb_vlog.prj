@@ -1,0 +1,23 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab1.srcs/sources_1/new/adder8.v" \
+"../../../../Lab1.srcs/sources_1/new/and_unit.v" \
+"../../../../Lab1.srcs/sources_1/new/cla_adder.v" \
+"../../../../Lab1.srcs/sources_1/new/cla_generator.v" \
+"../../../../Lab1.srcs/sources_1/new/comparator.v" \
+"../../../../Lab1.srcs/sources_1/new/counter.v" \
+"../../../../Lab1.srcs/sources_1/new/factorial_cu.v" \
+"../../../../Lab1.srcs/sources_1/new/factorial_dp.v" \
+"../../../../Lab1.srcs/sources_1/new/factorial_top.v" \
+"../../../../Lab1.srcs/sources_1/new/half_adder.v" \
+"../../../../Lab1.srcs/sources_1/new/multiplier.v" \
+"../../../../Lab1.srcs/sources_1/new/mux2.v" \
+"../../../../Lab1.srcs/sources_1/new/register.v" \
+"../../../../Lab1.srcs/sources_1/new/xor_unit.v" \
+"../../../../Lab1.srcs/sim_1/new/factorial_top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

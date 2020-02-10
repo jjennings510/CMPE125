@@ -17,9 +17,11 @@ parameter
     ERROR = 3'b101,
     
     // DP inputs
-    IDLE = 5'b00000,
-    LOAD = 5'b11010,
-    WAIT = 5'b00100,
+    // {load_reg, load_cnt, en, sel, oe }
+    
+    IDLE = 5'b11110,
+    LOAD = 5'b11110,
+    WAIT = 5'b00000,
     OUT  = 5'b00001,
     MULT = 5'b10100;
     
@@ -37,7 +39,8 @@ parameter
     begin
         case(CS)
             S0: begin
-                    if (!GO || ERR) NS = S0;
+                    if (ERR) NS = ERROR;
+                    else if (!GO) NS = S0;
                     else NS = S1;
                 end
             S1: NS = S2;
@@ -52,7 +55,7 @@ parameter
     end
     
     // Output logic
-    always@(*)
+    always@(CS)
     begin
         Done = 1'b0;
         Error = 1'b0;
@@ -62,7 +65,7 @@ parameter
             S2:    begin ctrl_sig = WAIT; state = CS; end
             S3:    begin ctrl_sig = OUT; Done = 1; state = CS; end
             S4:    begin ctrl_sig = MULT; state = CS; end
-            ERROR: begin ctrl_sig = ERR; Error = 1; state = CS; end
+            ERROR: begin ctrl_sig = IDLE; Error = 1; state = CS; end
         endcase
     end
 endmodule
