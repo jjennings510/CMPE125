@@ -1,8 +1,10 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/constrs_1/new/factorial_fpga.xdc rfile:../../../Lab1.srcs/constrs_1/new/factorial_fpga.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/benja/CMPE140/Lab1.srcs/constrs_1/new/factorial_fpga.xdc rfile:../../../Lab1.srcs/constrs_1/new/factorial_fpga.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN W5	IOSTANDARD LVCMOS33 } [get_ports { clk }];
+set_property -dict { PACKAGE_PIN W5	IOSTANDARD LVCMOS33 } [get_ports { clk100MHz }];
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports { go }];
+set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { go }];
+set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN U17   IOSTANDARD LVCMOS33 } [get_ports { clk }];
 set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN V17   IOSTANDARD LVCMOS33 } [get_ports { HILO_sel }];
 set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]

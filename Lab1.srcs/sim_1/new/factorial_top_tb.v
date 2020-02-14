@@ -106,5 +106,6 @@ module factoral_top_tb;
         begin
             if(out_tb != out_exp) error_count = error_count + 1;
         end
+        $finish;
     end
 endmodule

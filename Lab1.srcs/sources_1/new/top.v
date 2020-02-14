@@ -1,14 +1,12 @@
 module top(
     input [3:0] sw,
-    input clk, go, HILO_sel,
+    input clk, go, HILO_sel, clk100MHz,
     output [3:0] LEDSEL,
     output [6:0] LEDOUT,
     output error, done
     );
-    reg [31:0] test_val;
-    // initial test_val = 32'hfedc_3210;
-    initial test_val = 32'hba98_7654;
-    wire clk_5kHz;
+    
+    wire clk_5kHz, debounced_clk;
     wire [3:0] dig0, dig1, dig2, dig3, dig4, dig5, dig6, dig7;
     wire [3:0] HEX3, HEX2, HEX1, HEX0;
     wire [6:0] LED3, LED2, LED1, LED0;
@@ -16,10 +14,15 @@ module top(
     wire rst;
     assign rst = 0;
     
+    button_debouncer debounce(
+        .clk(clk_5kHz),
+        .button(clk),
+        .debounced_button(debounced_clk)
+    );
     
     factorial_top TOP(
         .GO (go),
-        .CLK (clk_5kHz),
+        .CLK (debounced_clk),
         .N (sw),
         .Done (done),
         .Error (error),
@@ -27,7 +30,7 @@ module top(
         );
     
     clk_gen U0 (
-        .clk50MHz(clk),
+        .clk50MHz(clk100MHz),
         .rst(rst),
         //clksec4,
         .clk_5KHz(clk_5kHz)

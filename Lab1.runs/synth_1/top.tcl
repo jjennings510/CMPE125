@@ -18,32 +18,36 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
-create_project -in_memory -part xc7a12ticsg325-1L
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
+create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.cache/wt [current_project]
-set_property parent.project_path C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/benja/CMPE140/Lab1.cache/wt [current_project]
+set_property parent.project_path C:/Users/benja/CMPE140/Lab1.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/jacob/Documents/CMPE140/Lab1/Lab1.cache/ip [current_project]
+set_property ip_output_repo c:/Users/benja/CMPE140/Lab1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/HILO_MUX.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/LEDmux.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/bin2hex32.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/clk_gen.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/comparator.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/counter.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/factorial_cu.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/factorial_dp.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/factorial_top.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/hex2led.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/multiplier.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/mux2.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/register.v
-  C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/sources_1/new/top.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/HILO_MUX.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/LEDmux.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/bin2hex32.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/button_debouncer.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/clk_gen.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/comparator.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/counter.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/factorial_cu.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/factorial_dp.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/factorial_top.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/hex2led.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/multiplier.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/mux2.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/register.v
+  C:/Users/benja/CMPE140/Lab1.srcs/sources_1/new/top.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -53,13 +57,13 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/constrs_1/new/factorial_fpga.xdc
-set_property used_in_implementation false [get_files C:/Users/jacob/Documents/CMPE140/Lab1/Lab1.srcs/constrs_1/new/factorial_fpga.xdc]
+read_xdc C:/Users/benja/CMPE140/Lab1.srcs/constrs_1/new/factorial_fpga.xdc
+set_property used_in_implementation false [get_files C:/Users/benja/CMPE140/Lab1.srcs/constrs_1/new/factorial_fpga.xdc]
 
-set_param ips.enableIPCacheLiteLoad 0
+set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top top -part xc7a12ticsg325-1L
+synth_design -top top -part xc7a35tcpg236-1
 
 
 # disable binary constraint mode for synth run checkpoints
