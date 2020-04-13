@@ -6,8 +6,11 @@ module counter (
     
     always @(posedge clk)
     begin
-        if (load_cnt) assign dout = din;
-        if (en) assign dout = dout - 4'b0001;
+        if(en)
+        begin
+            if(load_cnt) dout <= din;
+            else dout <= dout - 1'b1;
+        end
     end
         
 endmodule
